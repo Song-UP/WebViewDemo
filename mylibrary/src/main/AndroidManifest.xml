@@ -1,7 +1,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="wusong.com.mylibrary">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application android:allowBackup="true" android:label="@string/app_name"
         android:supportsRtl="true">
+        <uses-permission android:name="android.permission.INTERNET" />
+        <!-- 不设置Activity的 configChange，切屏时会调用各个声明周期两次 -->
+        <activity
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:name=".VideoWebActivity02" android:screenOrientation="portrait"/>
+
+        <activity
+
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:name=".VideoWebActivity" android:screenOrientation="portrait"/>
 
     </application>
 
